@@ -1,0 +1,100 @@
+import{
+    Login,
+    Register,
+    NotFound,
+    HomePage,
+    Settings,
+    Exam,
+    QuestionTableList,
+    ExamTableList,
+    ExamRecordList,
+    UserManage,
+    ExamRecord,
+    Exams,
+    ExamQuery
+} from '../views'
+
+export const mainRouter = [{
+   pathname:'/login',
+   component:Login
+},{
+    pathname:'/register',
+    component:Register
+ },{
+    pathname:'/404',
+    component:NotFound
+},{
+    pathname:'/exam',
+    component:Exam,
+    title:'在线考试',
+},{
+    pathname:'/examRecord',
+    component:ExamRecord,
+    title:'考试记录',
+}];
+
+export const summitExamRouter = [{
+     id:1,
+     pathname:'/summitexam/home',
+     component:HomePage,
+     title:'首页',
+     icon:'home',
+     isNav:true,
+     isRole:"1-2-3"
+ },{
+    id:2,
+    pathname:'/summitexam/exams',
+    component:Exams,
+    title:'考试列表',
+    icon:'edit',
+    isNav:true,
+    isRole:"3"
+},{
+    id:3,
+    pathname:'/summitexam/exam-table-list',
+    component:ExamTableList,
+    title:'试卷管理',
+    icon:'edit',
+    isNav:true,
+    isRole:"1-2"
+},{
+    id:4,
+    pathname:'/summitexam/question-table-list',
+    component:QuestionTableList,
+    title:'题目管理',
+    icon:'question',
+    isNav:true,
+    isRole:"1-2"
+},{
+    id:5,
+    pathname:'/summitexam/exam-record-list',
+    component:ExamRecordList,
+    title:'考试记录',
+    icon:'bulb',
+    isNav:true,
+    isRole:"3"
+},{
+    id:6,
+    pathname:'/summitexam/settings',
+    component:Settings,
+    icon:'setting',
+    title:'账号设置',
+},{
+    id:7,
+    pathname:'/summitexam/user-manage',
+    component:UserManage,
+    icon:'user',
+    title:'用户管理',
+    isNav:true,
+    isRole:"1"
+},{
+    id:7,
+    pathname:'/summitexam/exam-manage',
+    component:ExamQuery,
+    icon:'setting',
+    title:'考试统计分析',
+    isNav:true,
+    isRole:"1"
+}];
+
+
